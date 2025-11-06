@@ -19,6 +19,7 @@ data/
 outputs/models/
 
 # Outputs (except specific PDFs)
+reports/
 outputs/
 !outputs/figures/*.png
 !outputs/figures/*.pdf
