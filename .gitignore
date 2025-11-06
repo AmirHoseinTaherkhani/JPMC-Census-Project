@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
+segment_interpretation.py
 
 # Data files
 data/
