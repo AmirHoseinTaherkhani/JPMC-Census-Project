@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Data files
+data/
+*.csv
+*.parquet
+*.feather
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.model
+outputs/models/
+
+# Outputs (except specific PDFs)
+outputs/
+!outputs/figures/*.png
+!outputs/figures/*.pdf
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# System files
+.DS_Store
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+venv/
+env/
