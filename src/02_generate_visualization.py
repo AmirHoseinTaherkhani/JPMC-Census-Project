@@ -1,11 +1,3 @@
-"""
-Visualization Script for Census Income EDA
-Generates publication-quality figures for project report
-
-Author: Senior Data Scientist, JP Morgan
-Date: November 2025
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

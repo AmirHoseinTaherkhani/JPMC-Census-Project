@@ -1,19 +1,3 @@
-"""
-Customer Segmentation Analysis for Census Income Dataset
-
-Applies unsupervised learning to identify distinct customer segments
-for targeted marketing strategies.
-
-Approach:
-1. Feature engineering for segmentation
-2. Optimal cluster determination
-3. Segment profiling and characterization
-4. Marketing recommendations per segment
-
-Author: Senior Data Scientist, JP Morgan
-Date: November 2025
-"""
-
 import pandas as pd
 import numpy as np
 import json
@@ -25,8 +9,6 @@ from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
-from scipy.cluster.hierarchy import dendrogram, linkage
-from scipy.spatial.distance import cdist
 import warnings
 warnings.filterwarnings('ignore')
 

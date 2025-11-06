@@ -1,11 +1,3 @@
-"""
-Initial Exploratory Data Analysis for Census Income Dataset
-Generates JSON summary for preprocessing pipeline development
-
-Author: Senior Data Scientist, JP Morgan
-Date: November 2025
-"""
-
 import pandas as pd
 import numpy as np
 import json

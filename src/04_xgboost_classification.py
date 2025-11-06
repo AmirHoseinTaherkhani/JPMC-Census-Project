@@ -1,16 +1,3 @@
-"""
-XGBoost Income Classification Model
-
-Addresses:
-1. Severe class imbalance (15:1 ratio) using scale_pos_weight
-2. Sample weights for population-representative predictions
-3. Bayesian hyperparameter optimization
-4. Comprehensive evaluation metrics
-
-Author: Senior Data Scientist, JP Morgan
-Date: November 2025
-"""
-
 import pandas as pd
 import numpy as np
 import json

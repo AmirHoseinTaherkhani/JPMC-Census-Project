@@ -1,17 +1,3 @@
-"""
-Data Preprocessing and Cleaning Pipeline for Census Income Dataset
-
-Based on EDA findings:
-1. Severe class imbalance (15:1 ratio)
-2. Missing values encoded as "Not in universe", "?", and special codes
-3. Mix of categorical and numeric features requiring different treatment
-4. Weighted sampling must be preserved
-5. Duplicate records need handling
-
-Author: Senior Data Scientist, JP Morgan
-Date: November 2025
-"""
-
 import pandas as pd
 import numpy as np
 from pathlib import Path

@@ -25,16 +25,15 @@ This project delivers two complementary approaches to customer targeting:
 ```
 .
 ├── README.md
-├── environment.yml              # Conda environment specification
-├── ML-TakehomeProject.pdf       # Project requirements and dataset description
-├── Project Report.pdf           # Comprehensive analysis report
-└── src/                         # Source code
-    ├── data_preprocessing.py    # Data cleaning and feature engineering
-    ├── model_training.py        # XGBoost model development
-    ├── threshold_optimization.py # Threshold analysis
-    ├── customer_segmentation.py # K-means clustering
-    ├── visualization.py         # Plotting and charts
-    └── evaluation.py            # Model evaluation metrics
+├── environment.yml                     # Conda environment specification
+├── ML-TakehomeProject.pdf              # Project requirements and dataset description
+├── Project Report.pdf                  # Comprehensive analysis report
+└── src/                                # Source code
+    ├── 01_initial_eda.py               # Data cleaning
+    ├── 02_generate_visualization.py    # Data visualization
+    ├── 03_preprocessing_pipeline.py    # Preprocessing pipeline
+    ├── 04_xgboost_classification.py    # XGB Classification model
+    └── 05_customer_segmentation.py     # K-means clustering
 ```
 
 ## Dataset
@@ -61,8 +60,7 @@ The analysis uses approximately 200,000 records from the 1994-1995 U.S. Census B
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/census-income-classification.git
-cd census-income-classification
+git clone https://github.com/AmirHoseinTaherkhani/JPMC-Census-Project
 ```
 
 2. Create and activate the conda environment:
@@ -74,57 +72,6 @@ conda activate census-income
 3. Verify installation:
 ```bash
 python -c "import xgboost; import sklearn; print('Setup successful!')"
-```
-
-## Usage
-
-### 1. Data Preprocessing
-
-```python
-from src.data_preprocessing import preprocess_data
-
-# Load and clean data
-X_train, X_test, y_train, y_test, sample_weights = preprocess_data('data/census_data.csv')
-```
-
-### 2. Train Classification Model
-
-```python
-from src.model_training import train_xgboost_model
-
-# Train model with optimized hyperparameters
-model = train_xgboost_model(X_train, y_train, sample_weights)
-```
-
-### 3. Optimize Decision Threshold
-
-```python
-from src.threshold_optimization import find_optimal_threshold
-
-# Analyze precision-recall tradeoffs
-optimal_threshold = find_optimal_threshold(model, X_test, y_test)
-```
-
-### 4. Customer Segmentation
-
-```python
-from src.customer_segmentation import create_segments
-
-# Generate three customer segments
-segments = create_segments(X_train, n_clusters=3)
-```
-
-### 5. Evaluate and Visualize
-
-```python
-from src.evaluation import evaluate_model
-from src.visualization import plot_performance
-
-# Evaluate model performance
-metrics = evaluate_model(model, X_test, y_test, threshold=0.81)
-
-# Generate visualizations
-plot_performance(model, X_test, y_test)
 ```
 
 ## Methodology
@@ -171,37 +118,11 @@ plot_performance(model, X_test, y_test)
 - **Provides interpretable results** through feature importance analysis
 - **Offers flexible deployment** with multiple threshold options
 
-## Limitations
-
-- Data from 1994-1995 may not reflect current economic conditions
-- Model includes protected characteristics (sex, race) requiring legal review
-- Assumes relatively stable relationships between features and income
-- Performance depends on similarity between training and deployment populations
-
-## Future Work
-
-- Update analysis with current Census data
-- Implement fairness constraints to address protected characteristics
-- Develop ensemble methods combining multiple algorithms
-- Create real-time prediction API
-- Build interactive dashboard for threshold selection
-- Validate segments through A/B testing
-
 ## Author
 
 **Amir Taherkhani**
 
 JPMorgan Chase Data Science Challenge - November 2025
-
-## License
-
-This project is available for educational and portfolio purposes.
-
-## Acknowledgments
-
-- U.S. Census Bureau for the dataset
-- JPMorgan Chase for the challenge opportunity
-- XGBoost and scikit-learn communities for excellent documentation
 
 ---
 
